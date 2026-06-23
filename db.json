@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "iPhone 15",
+      "price": 79999
+    },
+    {
+      "id": 2,
+      "title": "Samsung S24",
+      "price": 69999
+    }
+  ],
+
+  "users": []
+}
