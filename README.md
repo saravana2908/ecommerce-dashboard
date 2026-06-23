@@ -1,16 +1,73 @@
-# React + Vite
+# Progress Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Completed
 
-Currently, two official plugins are available:
+### Project Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Created React project using Vite.
+* Converted project from TypeScript to JavaScript.
+* Migrated React version from React 19 to React 18.
+* Migrated React Router DOM from version 7 to version 6.
+* Configured project folder structure.
 
-## React Compiler
+### Redux Toolkit
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Created Redux Store.
+* Created Authentication Slice.
+* Connected Redux Provider with the application.
+* Verified Redux state management flow.
 
-## Expanding the ESLint configuration
+### Routing
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Configured Browser Router.
+* Prepared route structure for application pages.
+
+### Redux Persist
+
+* Configured Redux Persist.
+* Verified state persistence after page refresh.
+
+### RTK Query
+
+* Created API Slice.
+* Connected RTK Query with Redux Store.
+* Configured API reducer and middleware.
+* Understood query and caching flow.
+
+### Mock Backend
+
+* Created db.json as local database.
+* Installed and configured JSON Server.
+* Created local API endpoints.
+* Verified API responses through browser.
+
+### Products Module
+
+* Created Products Page.
+* Configured Products API endpoint.
+* Fetched products using RTK Query.
+* Displayed products on UI successfully.
+
+### Authentication Module
+
+* Created Register Page structure.
+* Created Login Page structure.
+* Implemented useState for form field handling.
+* Verified input state updates successfully.
+
+## In Progress
+
+* User Registration API Integration.
+* Login Functionality.
+* Authentication Flow.
+
+## Pending
+
+* Product Details Page.
+* Cart Module.
+* Wishlist Module.
+* Profile Module.
+* Dashboard Module.
+* Search and Filter Functionality.
+* Final UI Design.
+* Responsive Design.
