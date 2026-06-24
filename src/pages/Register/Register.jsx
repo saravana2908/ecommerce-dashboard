@@ -1,14 +1,30 @@
 import { useState } from "react";
+import { useRegisterUserMutation } from "../../services/api";
 function Register() {
 
 const [name, setName] = useState("");
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
+
+const [registerUser] = useRegisterUserMutation();
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const userData = {
+    name,
+    email,
+    password,
+  };
+
+  await registerUser(userData);
+
+  console.log("User Registered Successfully");
+};
   return (
     <div>
       <h1>Register</h1>
 
-      <form>
+    <form onSubmit={handleSubmit}>
         <input
   type="text"
   placeholder="Enter Name"
@@ -40,9 +56,7 @@ const [password, setPassword] = useState("");
           Register
         </button>
 
-        <p>{name}</p>
-<p>{email}</p>
-<p>{password}</p>
+        
       </form>
     </div>
   );

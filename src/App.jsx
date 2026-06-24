@@ -1,7 +1,7 @@
-import Register from "./pages/Register/Register";
+import AppRouter from "./router/AppRouter";
 
 function App() {
-  return <Register />;
+  return <AppRouter />;
 }
 
 export default App;

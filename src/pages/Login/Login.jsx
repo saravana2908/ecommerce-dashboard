@@ -1,50 +1,65 @@
 import { useState } from "react";
+import { useGetUsersQuery } from "../../services/api";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { login } from "../../features/auth/authSlice";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-const handleLogin = () => {
-  const user = {
-    email,
-  };
+  const { data: users = [] } = useGetUsersQuery();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const handleSubmit = (e) => {
+  e.preventDefault();
 
-  dispatch(login(user));
+  const user = users.find(
+    (user) =>
+      user.email === email &&
+      user.password === password
+  );
 
-  navigate("/dashboard");
+  if (user) {
+dispatch(login(user));
+
+navigate("/home");  } 
+else {
+    console.log("Invalid Credentials");
+  }
 };
   return (
-    <>
-      <h1>Login Page</h1>
+    <div>
+      <h1>Login</h1>
 
-      <input
-        type="email"
-        placeholder="Enter Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
+     <form onSubmit={handleSubmit}>
 
-      <br />
-      <br />
+        <input
+          type="email"
+          placeholder="Enter Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
 
-      <input
-        type="password"
-        placeholder="Enter Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
+        <br /><br />
 
-      <br />
-      <br />
+        <input
+          type="password"
+          placeholder="Enter Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
 
-      <button onClick={handleLogin}>
-  Login
-</button>
-    </>
+        <br /><br />
+
+        <button type="submit">
+          Login
+        </button>
+
+      </form>
+
+      
+    </div>
   );
 }
 

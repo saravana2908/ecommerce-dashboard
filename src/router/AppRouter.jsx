@@ -1,18 +1,61 @@
 import { Routes, Route } from "react-router-dom";
 
 import Login from "../pages/Login/Login";
-import Dashboard from "../pages/Dashboard/Dashboard";
+import Register from "../pages/Register/Register";
+import Home from "../pages/Home/Home";
+import Products from "../pages/Products/Products";
+import Cart from "../pages/Cart/Cart";
+import Wishlist from "../pages/Wishlist/Wishlist";
+import Profile from "../pages/Profile/Profile";
+
 import ProtectedRoute from "./ProtectedRoute";
 
 function AppRouter() {
   return (
     <Routes>
-      <Route path="/" element={<Login />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+
       <Route
-  path="/dashboard"
+        path="/home"
+        element={
+          <ProtectedRoute>
+            <Home />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/products"
+        element={
+          <ProtectedRoute>
+            <Products />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+  path="/cart"
   element={
     <ProtectedRoute>
-      <Dashboard />
+      <Cart />
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/wishlist"
+  element={
+    <ProtectedRoute>
+      <Wishlist />
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/profile"
+  element={
+    <ProtectedRoute>
+      <Profile />
     </ProtectedRoute>
   }
 />
