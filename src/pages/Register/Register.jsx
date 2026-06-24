@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { useRegisterUserMutation } from "../../services/api";
+import { useNavigate } from "react-router-dom";
+import "./Register.css";
 function Register() {
 
 const [name, setName] = useState("");
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
-
+const navigate = useNavigate();
 const [registerUser] = useRegisterUserMutation();
 const handleSubmit = async (e) => {
   e.preventDefault();
@@ -16,12 +18,14 @@ const handleSubmit = async (e) => {
     password,
   };
 
-  await registerUser(userData);
+ await registerUser(userData);
 
-  console.log("User Registered Successfully");
+alert("Registration Successful");
+
+navigate("/login");
 };
   return (
-    <div>
+   <div className="auth-container">
       <h1>Register</h1>
 
     <form onSubmit={handleSubmit}>
@@ -55,6 +59,16 @@ const handleSubmit = async (e) => {
         <button type="submit">
           Register
         </button>
+
+        <p>
+  Already have an account?{" "}
+  <span
+    style={{ color: "blue", cursor: "pointer" }}
+    onClick={() => navigate("/login")}
+  >
+    Login
+  </span>
+</p>
 
         
       </form>

@@ -1,258 +1,259 @@
 {
   "products": [
-{
-"id": "1",
-"title": "iPhone 15",
-"price": 79999,
-"category": "Mobile",
-"image": "https://via.placeholder.com/300",
-"description": "Apple iPhone 15 128GB"
-},
-{
-"id": "2",
-"title": "Samsung S24",
-"price": 69999,
-"category": "Mobile",
-"image": "https://via.placeholder.com/300",
-"description": "Samsung Galaxy S24"
-},
-{
-"id": "3",
-"title": "OnePlus 12",
-"price": 59999,
-"category": "Mobile",
-"image": "https://via.placeholder.com/300",
-"description": "OnePlus 12 256GB"
-},
-{
-"id": "4",
-"title": "Google Pixel 8",
-"price": 64999,
-"category": "Mobile",
-"image": "https://via.placeholder.com/300",
-"description": "Google Pixel 8"
-},
-{
-"id": "5",
-"title": "Xiaomi 14",
-"price": 54999,
-"category": "Mobile",
-"image": "https://via.placeholder.com/300",
-"description": "Xiaomi 14 256GB"
-},
-{
-"id": "6",
-"title": "Realme GT 6",
-"price": 39999,
-"category": "Mobile",
-"image": "https://via.placeholder.com/300",
-"description": "Realme GT 6"
-},
-{
-"id": "7",
-"title": "Vivo X100",
-"price": 58999,
-"category": "Mobile",
-"image": "https://via.placeholder.com/300",
-"description": "Vivo X100"
-},
-{
-"id": "8",
-"title": "Oppo Find X7",
-"price": 61999,
-"category": "Mobile",
-"image": "https://via.placeholder.com/300",
-"description": "Oppo Find X7"
-},
-
-{
-"id": "9",
-"title": "MacBook Air M3",
-"price": 114999,
-"category": "Laptop",
-"image": "https://via.placeholder.com/300",
-"description": "Apple MacBook Air M3"
-},
-{
-"id": "10",
-"title": "Dell XPS 15",
-"price": 99999,
-"category": "Laptop",
-"image": "https://via.placeholder.com/300",
-"description": "Dell XPS 15"
-},
-{
-"id": "11",
-"title": "HP Spectre x360",
-"price": 104999,
-"category": "Laptop",
-"image": "https://via.placeholder.com/300",
-"description": "HP Spectre x360"
-},
-{
-"id": "12",
-"title": "Lenovo Legion 5",
-"price": 89999,
-"category": "Laptop",
-"image": "https://via.placeholder.com/300",
-"description": "Lenovo Legion 5"
-},
-{
-"id": "13",
-"title": "Asus ROG Strix",
-"price": 119999,
-"category": "Laptop",
-"image": "https://via.placeholder.com/300",
-"description": "Asus ROG Strix"
-},
-{
-"id": "14",
-"title": "Acer Predator",
-"price": 109999,
-"category": "Laptop",
-"image": "https://via.placeholder.com/300",
-"description": "Acer Predator Gaming Laptop"
-},
-{
-"id": "15",
-"title": "MSI Katana",
-"price": 94999,
-"category": "Laptop",
-"image": "https://via.placeholder.com/300",
-"description": "MSI Katana"
-},
-{
-"id": "16",
-"title": "Samsung Galaxy Book",
-"price": 84999,
-"category": "Laptop",
-"image": "https://via.placeholder.com/300",
-"description": "Samsung Galaxy Book"
-},
-
-{
-"id": "17",
-"title": "Sony WH-1000XM5",
-"price": 29999,
-"category": "Headphones",
-"image": "https://via.placeholder.com/300",
-"description": "Sony Noise Cancelling Headphones"
-},
-{
-"id": "18",
-"title": "AirPods Pro 2",
-"price": 24999,
-"category": "Headphones",
-"image": "https://via.placeholder.com/300",
-"description": "Apple AirPods Pro 2"
-},
-{
-"id": "19",
-"title": "JBL Tune 770NC",
-"price": 8999,
-"category": "Headphones",
-"image": "https://via.placeholder.com/300",
-"description": "JBL Wireless Headphones"
-},
-{
-"id": "20",
-"title": "Boat Nirvana",
-"price": 2999,
-"category": "Headphones",
-"image": "https://via.placeholder.com/300",
-"description": "Boat Nirvana Headphones"
-},
-{
-"id": "21",
-"title": "Sennheiser HD450BT",
-"price": 12999,
-"category": "Headphones",
-"image": "https://via.placeholder.com/300",
-"description": "Sennheiser Wireless Headphones"
-},
-{
-"id": "22",
-"title": "Skullcandy Crusher",
-"price": 14999,
-"category": "Headphones",
-"image": "https://via.placeholder.com/300",
-"description": "Skullcandy Crusher Bass Headphones"
-},
-
-{
-"id": "23",
-"title": "Apple Watch Series 9",
-"price": 42999,
-"category": "Smartwatch",
-"image": "https://via.placeholder.com/300",
-"description": "Apple Watch Series 9"
-},
-{
-"id": "24",
-"title": "Samsung Galaxy Watch 6",
-"price": 28999,
-"category": "Smartwatch",
-"image": "https://via.placeholder.com/300",
-"description": "Samsung Galaxy Watch 6"
-},
-{
-"id": "25",
-"title": "Noise ColorFit Pro",
-"price": 3999,
-"category": "Smartwatch",
-"image": "https://via.placeholder.com/300",
-"description": "Noise Smartwatch"
-},
-{
-"id": "26",
-"title": "Fire-Boltt Visionary",
-"price": 2999,
-"category": "Smartwatch",
-"image": "https://via.placeholder.com/300",
-"description": "Fire-Boltt Smartwatch"
-},
-{
-"id": "27",
-"title": "Amazfit GTR 4",
-"price": 16999,
-"category": "Smartwatch",
-"image": "https://via.placeholder.com/300",
-"description": "Amazfit GTR 4"
-},
-{
-"id": "28",
-"title": "Fitbit Versa 4",
-"price": 18999,
-"category": "Smartwatch",
-"image": "https://via.placeholder.com/300",
-"description": "Fitbit Versa 4"
-},
-{
-"id": "29",
-"title": "Garmin Venu 3",
-"price": 34999,
-"category": "Smartwatch",
-"image": "https://via.placeholder.com/300",
-"description": "Garmin Venu 3"
-},
-{
-"id": "30",
-"title": "Huawei Watch GT 4",
-"price": 22999,
-"category": "Smartwatch",
-"image": "https://via.placeholder.com/300",
-"description": "Huawei Watch GT 4"
-}
-],
-
+    {
+      "id": "1",
+      "title": "iPhone 15",
+      "price": 79999,
+      "category": "Mobile",
+      "image": "https://picsum.photos/400/300",
+      "description": "Apple iPhone 15 128GB"
+    },
+    {
+      "id": "2",
+      "title": "Samsung S24",
+      "price": 69999,
+      "category": "Mobile",
+      "image": "https://via.placeholder.com/300",
+      "description": "Samsung Galaxy S24"
+    },
+    {
+      "id": "3",
+      "title": "OnePlus 12",
+      "price": 59999,
+      "category": "Mobile",
+      "image": "https://via.placeholder.com/300",
+      "description": "OnePlus 12 256GB"
+    },
+    {
+      "id": "4",
+      "title": "Google Pixel 8",
+      "price": 64999,
+      "category": "Mobile",
+      "image": "https://via.placeholder.com/300",
+      "description": "Google Pixel 8"
+    },
+    {
+      "id": "5",
+      "title": "Xiaomi 14",
+      "price": 54999,
+      "category": "Mobile",
+      "image": "https://via.placeholder.com/300",
+      "description": "Xiaomi 14 256GB"
+    },
+    {
+      "id": "6",
+      "title": "Realme GT 6",
+      "price": 39999,
+      "category": "Mobile",
+      "image": "https://via.placeholder.com/300",
+      "description": "Realme GT 6"
+    },
+    {
+      "id": "7",
+      "title": "Vivo X100",
+      "price": 58999,
+      "category": "Mobile",
+      "image": "https://via.placeholder.com/300",
+      "description": "Vivo X100"
+    },
+    {
+      "id": "8",
+      "title": "Oppo Find X7",
+      "price": 61999,
+      "category": "Mobile",
+      "image": "https://via.placeholder.com/300",
+      "description": "Oppo Find X7"
+    },
+    {
+      "id": "9",
+      "title": "MacBook Air M3",
+      "price": 114999,
+      "category": "Laptop",
+      "image": "https://via.placeholder.com/300",
+      "description": "Apple MacBook Air M3"
+    },
+    {
+      "id": "10",
+      "title": "Dell XPS 15",
+      "price": 99999,
+      "category": "Laptop",
+      "image": "https://via.placeholder.com/300",
+      "description": "Dell XPS 15"
+    },
+    {
+      "id": "11",
+      "title": "HP Spectre x360",
+      "price": 104999,
+      "category": "Laptop",
+      "image": "https://via.placeholder.com/300",
+      "description": "HP Spectre x360"
+    },
+    {
+      "id": "12",
+      "title": "Lenovo Legion 5",
+      "price": 89999,
+      "category": "Laptop",
+      "image": "https://via.placeholder.com/300",
+      "description": "Lenovo Legion 5"
+    },
+    {
+      "id": "13",
+      "title": "Asus ROG Strix",
+      "price": 119999,
+      "category": "Laptop",
+      "image": "https://via.placeholder.com/300",
+      "description": "Asus ROG Strix"
+    },
+    {
+      "id": "14",
+      "title": "Acer Predator",
+      "price": 109999,
+      "category": "Laptop",
+      "image": "https://via.placeholder.com/300",
+      "description": "Acer Predator Gaming Laptop"
+    },
+    {
+      "id": "15",
+      "title": "MSI Katana",
+      "price": 94999,
+      "category": "Laptop",
+      "image": "https://via.placeholder.com/300",
+      "description": "MSI Katana"
+    },
+    {
+      "id": "16",
+      "title": "Samsung Galaxy Book",
+      "price": 84999,
+      "category": "Laptop",
+      "image": "https://via.placeholder.com/300",
+      "description": "Samsung Galaxy Book"
+    },
+    {
+      "id": "17",
+      "title": "Sony WH-1000XM5",
+      "price": 29999,
+      "category": "Headphones",
+      "image": "https://via.placeholder.com/300",
+      "description": "Sony Noise Cancelling Headphones"
+    },
+    {
+      "id": "18",
+      "title": "AirPods Pro 2",
+      "price": 24999,
+      "category": "Headphones",
+      "image": "https://via.placeholder.com/300",
+      "description": "Apple AirPods Pro 2"
+    },
+    {
+      "id": "19",
+      "title": "JBL Tune 770NC",
+      "price": 8999,
+      "category": "Headphones",
+      "image": "https://via.placeholder.com/300",
+      "description": "JBL Wireless Headphones"
+    },
+    {
+      "id": "20",
+      "title": "Boat Nirvana",
+      "price": 2999,
+      "category": "Headphones",
+      "image": "https://via.placeholder.com/300",
+      "description": "Boat Nirvana Headphones"
+    },
+    {
+      "id": "21",
+      "title": "Sennheiser HD450BT",
+      "price": 12999,
+      "category": "Headphones",
+      "image": "https://via.placeholder.com/300",
+      "description": "Sennheiser Wireless Headphones"
+    },
+    {
+      "id": "22",
+      "title": "Skullcandy Crusher",
+      "price": 14999,
+      "category": "Headphones",
+      "image": "https://via.placeholder.com/300",
+      "description": "Skullcandy Crusher Bass Headphones"
+    },
+    {
+      "id": "23",
+      "title": "Apple Watch Series 9",
+      "price": 42999,
+      "category": "Smartwatch",
+      "image": "https://via.placeholder.com/300",
+      "description": "Apple Watch Series 9"
+    },
+    {
+      "id": "24",
+      "title": "Samsung Galaxy Watch 6",
+      "price": 28999,
+      "category": "Smartwatch",
+      "image": "https://via.placeholder.com/300",
+      "description": "Samsung Galaxy Watch 6"
+    },
+    {
+      "id": "25",
+      "title": "Noise ColorFit Pro",
+      "price": 3999,
+      "category": "Smartwatch",
+      "image": "https://via.placeholder.com/300",
+      "description": "Noise Smartwatch"
+    },
+    {
+      "id": "26",
+      "title": "Fire-Boltt Visionary",
+      "price": 2999,
+      "category": "Smartwatch",
+      "image": "https://via.placeholder.com/300",
+      "description": "Fire-Boltt Smartwatch"
+    },
+    {
+      "id": "27",
+      "title": "Amazfit GTR 4",
+      "price": 16999,
+      "category": "Smartwatch",
+      "image": "https://via.placeholder.com/300",
+      "description": "Amazfit GTR 4"
+    },
+    {
+      "id": "28",
+      "title": "Fitbit Versa 4",
+      "price": 18999,
+      "category": "Smartwatch",
+      "image": "https://via.placeholder.com/300",
+      "description": "Fitbit Versa 4"
+    },
+    {
+      "id": "29",
+      "title": "Garmin Venu 3",
+      "price": 34999,
+      "category": "Smartwatch",
+      "image": "https://via.placeholder.com/300",
+      "description": "Garmin Venu 3"
+    },
+    {
+      "id": "30",
+      "title": "Huawei Watch GT 4",
+      "price": 22999,
+      "category": "Smartwatch",
+      "image": "https://via.placeholder.com/300",
+      "description": "Huawei Watch GT 4"
+    }
+  ],
   "users": [
     {
       "name": "saravana",
-      "email": "saravana@gmail.c",
-      "password": "edjn",
-      "id": "OfA9PxQ0w2o"
+      "email": "saravana@gmail.com",
+      "password": "saro",
+      "id": "kKahpI0hxcU"
+    },
+    {
+      "name": "saravana",
+      "email": "saravana@gmail.com",
+      "password": "hi",
+      "id": "JNTDAtBraaw"
     }
-    
   ],
   "$schema": "./node_modules/json-server/schema.json"
 }

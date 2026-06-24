@@ -3,12 +3,14 @@ import { useGetUsersQuery } from "../../services/api";
 import { useDispatch } from "react-redux";
 import { login } from "../../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
+import "./Login.css";
 
 function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { data: users = [] } = useGetUsersQuery();
+  const [error, setError] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleSubmit = (e) => {
@@ -25,11 +27,11 @@ dispatch(login(user));
 
 navigate("/home");  } 
 else {
-    console.log("Invalid Credentials");
+    setError("Invalid Email or Password");
   }
 };
   return (
-    <div>
+   <div className="auth-container">
       <h1>Login</h1>
 
      <form onSubmit={handleSubmit}>
@@ -41,7 +43,7 @@ else {
           onChange={(e) => setEmail(e.target.value)}
         />
 
-        <br /><br />
+        
 
         <input
           type="password"
@@ -50,11 +52,23 @@ else {
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <br /><br />
+        
 
         <button type="submit">
           Login
         </button>
+
+        {error && <p style={{ color: "red" }}>{error}</p>}
+
+       <p>
+  Don't have an account?{" "}
+  <span
+    style={{ color: "blue", cursor: "pointer" }}
+    onClick={() => navigate("/register")}
+  >
+    Register
+  </span>
+</p>
 
       </form>
 
