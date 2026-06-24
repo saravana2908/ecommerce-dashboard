@@ -7,7 +7,7 @@ import Products from "../pages/Products/Products";
 import Cart from "../pages/Cart/Cart";
 import Wishlist from "../pages/Wishlist/Wishlist";
 import Profile from "../pages/Profile/Profile";
-
+import ProductDetails from "../pages/ProductDetails/ProductDetails";
 import ProtectedRoute from "./ProtectedRoute";
 
 function AppRouter() {
@@ -33,6 +33,13 @@ function AppRouter() {
           </ProtectedRoute>
         }
       />
+      <Route
+  path="/products/:id"
+  element={
+  <ProtectedRoute>
+    <ProductDetails />
+  </ProtectedRoute>}
+/>
       <Route
   path="/cart"
   element={

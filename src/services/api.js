@@ -12,6 +12,10 @@ export const api = createApi({
       query: () => "products",
     }),
 
+    getProductById: builder.query({
+  query: (id) => `products/${id}`,
+}),
+
     registerUser: builder.mutation({
       query: (userData) => ({
         url: "users",
@@ -28,6 +32,7 @@ export const api = createApi({
 
 export const {
   useGetProductsQuery,
+  useGetProductByIdQuery,
   useRegisterUserMutation,
   useGetUsersQuery,
 } = api;

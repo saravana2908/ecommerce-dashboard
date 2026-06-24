@@ -6,73 +6,56 @@ import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 function Login() {
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { data: users = [] } = useGetUsersQuery();
   const [error, setError] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const handleSubmit = (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  const user = users.find(
-    (user) =>
-      user.email === email &&
-      user.password === password
-  );
+    console.log("All users:", users);
+    console.log("Trying:", email, password);
 
-  if (user) {
-dispatch(login(user));
+    const user = users.find(
+      (user) => user.email === email && user.password === password
+    );
 
-navigate("/home");  } 
-else {
-    setError("Invalid Email or Password");
-  }
-};
+    if (user) {
+      dispatch(login(user));
+      navigate("/home");
+    } else {
+      setError("Invalid Email or Password");
+    }
+  };
+
   return (
-   <div className="auth-container">
-      <h1>Login</h1>
-
-     <form onSubmit={handleSubmit}>
-
-        <input
-          type="email"
-          placeholder="Enter Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-
-        
-
-        <input
-          type="password"
-          placeholder="Enter Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-
-        
-
-        <button type="submit">
-          Login
-        </button>
-
-        {error && <p style={{ color: "red" }}>{error}</p>}
-
-       <p>
-  Don't have an account?{" "}
-  <span
-    style={{ color: "blue", cursor: "pointer" }}
-    onClick={() => navigate("/register")}
-  >
-    Register
-  </span>
-</p>
-
-      </form>
-
-      
+    <div className="auth-container">
+      <div className="auth-wrapper">
+        <h1>Login</h1>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Enter Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Enter Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button type="submit">Login</button>
+          {error && <p style={{ color: "red" }}>{error}</p>}
+          <p>
+            Don't have an account?{" "}
+            <span onClick={() => navigate("/register")}>Register</span>
+          </p>
+        </form>
+      </div>
     </div>
   );
 }
