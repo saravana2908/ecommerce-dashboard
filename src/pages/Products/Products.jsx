@@ -8,6 +8,7 @@ import { addToWishlist } from "../../features/wishlist/wishlistSlice";
 import { useSelector } from "react-redux";
 import {removeFromWishlist} from "../../features/wishlist/wishlistSlice";
 import { addToCart } from "../../features/cart/cartSlice";
+
 const CATEGORIES = ["All", "Mobile", "Laptop", "Headphones", "Smartwatch"];
 
 const PRICE_RANGES = [
@@ -267,21 +268,31 @@ const wishlistItems = useSelector(
       : ""
   }`}
   onClick={() => {
-    const isWishlisted =
-      wishlistItems.some(
-        (item) => item.id === product.id
-      );
 
-    if (isWishlisted) {
-      dispatch(
-        removeFromWishlist(product.id)
-      );
-    } else {
-      dispatch(
-        addToWishlist(product)
-      );
-    }
-  }}
+  const isWishlisted =
+    wishlistItems.some(
+      (item) => item.id === product.id
+    );
+
+  if (isWishlisted) {
+
+    dispatch(
+      removeFromWishlist(product.id)
+    );
+
+    toast.info("💔 Removed from Wishlist");
+
+  } else {
+
+    dispatch(
+      addToWishlist(product)
+    );
+
+    toast.success("❤️ Added to Wishlist");
+
+  }
+
+}}
 >
   {wishlistItems.some(
     (item) => item.id === product.id
@@ -333,9 +344,13 @@ const wishlistItems = useSelector(
 </button>
                    <button
   className="btn-cart"
-  onClick={() =>
-    dispatch(addToCart(product))
-  }
+  onClick={() => {
+
+  dispatch(addToCart(product));
+
+  toast.success("🛒 Product Added to Cart");
+
+}}
 >
   Add To Cart
 </button>

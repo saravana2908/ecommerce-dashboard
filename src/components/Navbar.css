@@ -149,3 +149,60 @@
 .dashboard-icon{
   font-size:16px;
 }
+
+/* Icon Wrapper */
+
+.nav-icon{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  font-size: 22px;
+
+  text-decoration: none;
+
+  transition: .3s;
+}
+
+.nav-icon:hover{
+  color:#ff9900;
+}
+
+/* Badge */
+
+.icon-badge{
+
+  position:absolute;
+
+  top:-8px;
+
+  right:-10px;
+
+  min-width:20px;
+
+  height:20px;
+
+  border-radius:50%;
+
+  background:#ff3b30;
+
+  color:#fff;
+
+  font-size:11px;
+
+  font-weight:700;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  border:2px solid #131921;
+
+  padding:0 5px;
+
+}

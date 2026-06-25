@@ -409,6 +409,18 @@
       "email": "rahul@gmail.com",
       "password": "1234",
       "id": "4hrTL6befTM"
+    },
+    {
+      "name": "Vijay",
+      "email": "vijay@nomail.com",
+      "password": "vijay",
+      "id": "qHerxeO6xoI"
+    },
+    {
+      "name": "prak",
+      "email": "h@gmail.com",
+      "password": "12345678",
+      "id": "gfUV-Us0maw"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
