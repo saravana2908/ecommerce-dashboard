@@ -15,7 +15,7 @@ function Register() {
     const userData = { name, email, password };
     await registerUser(userData);
     alert("Registration Successful");
-    navigate("/login");
+    navigate("/");
   };
 
   return (
@@ -44,7 +44,7 @@ function Register() {
           <button type="submit">Register</button>
           <p>
             Already have an account?{" "}
-            <span onClick={() => navigate("/login")}>Login</span>
+            <span onClick={() => navigate("/")}>Login</span>
           </p>
         </form>
       </div>

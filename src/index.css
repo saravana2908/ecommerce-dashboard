@@ -1,118 +1,89 @@
 /* ===========================
    Light Theme
 =========================== */
-
+ 
 :root {
-
   --bg-color: #f5f7fa;
   --card-color: #ffffff;
   --navbar-color: #131921;
-
+ 
   --text-color: #222222;
   --text-secondary: #666666;
-
+ 
   --button-color: #ff9900;
   --button-hover: #e68a00;
-
+ 
   --shadow: 0 6px 18px rgba(0,0,0,.08);
-
 }
-
+ 
 /* ===========================
    Dark Theme
 =========================== */
-
-body.dark{
-
-  --bg-color:#121212;
-
-  --card-color:#1f1f1f;
-
-  --navbar-color:#181818;
-
-  --text-color:#ffffff;
-
-  --text-secondary:#bbbbbb;
-
-  --button-color:#ff9900;
-
-  --button-hover:#ffb84d;
-
-  --shadow:0 6px 18px rgba(0,0,0,.35);
-
+ 
+body.dark {
+  --bg-color: #121212;
+  --card-color: #1f1f1f;
+  --navbar-color: #181818;
+ 
+  --text-color: #ffffff;
+  --text-secondary: #bbbbbb;
+ 
+  --button-color: #ff9900;
+  --button-hover: #ffb84d;
+ 
+  --shadow: 0 6px 18px rgba(0,0,0,.35);
 }
-
+ 
 /* ===========================
    Reset
 =========================== */
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
+ 
 html,
 body,
-#root{
-  width:100%;
-  min-height:100%;
+#root {
+  width: 100%;
+  min-height: 100%;
 }
-
-body{
-
-  background:var(--bg-color);
-
-  color:var(--text-color);
-
-  font-family:Segoe UI,sans-serif;
-
-  transition:.3s;
-
-  overflow-x:hidden;
-
+ 
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: Segoe UI, sans-serif;
+  transition: .3s;
+  overflow-x: hidden;
 }
-
-#root{
-
-  width:100%;
-
-  min-height:100vh;
-
+ 
+#root {
+  width: 100%;
+  min-height: 100vh;
 }
-
-h1,h2,h3,h4,h5,h6{
-
-  color:var(--text-color);
-
+ 
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
 }
-
-p{
-
-  color:var(--text-secondary);
-
+ 
+p {
+  color: var(--text-secondary);
 }
-
-a{
-
-  text-decoration:none;
-
-  color:inherit;
-
+ 
+a {
+  text-decoration: none;
+  color: inherit;
 }
-
-img{
-
-  display:block;
-
-  max-width:100%;
-
+ 
+img {
+  display: block;
+  max-width: 100%;
 }
-
-button{
-
-  font:inherit;
-
-  cursor:pointer;
-
+ 
+button {
+  font: inherit;
+  cursor: pointer;
 }
+ 

@@ -6,10 +6,21 @@ import {
   removeFromCart,
 } from "../../features/cart/cartSlice";
 import "./Cart.css";
-
+import { useState, useEffect } from "react";
 function Cart() {
+  const [currentPage, setCurrentPage] = useState(1);
+
+const itemsPerPage = 4;
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
+
+  const totalPages = Math.ceil(cartItems.length / itemsPerPage);
+
+const startIndex = (currentPage - 1) * itemsPerPage;
+
+const endIndex = startIndex + itemsPerPage;
+
+const currentCartItems = cartItems.slice(startIndex, endIndex);
 
   const subtotal = cartItems.reduce(
     (total, item) => total + item.price * item.quantity,
@@ -85,8 +96,12 @@ function Cart() {
                   </div>
                 )}
 
-                {cartItems.map((item) => (
+                {currentCartItems.map((item) => (
                   <div key={item.id} className="ct-card">
+
+                
+
+       
 
                     {/* Remove ✕ */}
                     <button
@@ -148,9 +163,35 @@ function Cart() {
                         </div>
                       </div>
                     </div>
-
-                  </div>
+</div>
+                  
                 ))}
+
+                             <div className="cart-pagination">
+  <button
+    onClick={() => setCurrentPage(currentPage - 1)}
+    disabled={currentPage === 1}
+  >
+    Previous
+  </button>
+
+  {Array.from({ length: totalPages }, (_, index) => (
+  <button
+    key={index}
+    onClick={() => setCurrentPage(index + 1)}
+    className={currentPage === index + 1 ? "active-page" : ""}
+  >
+    {index + 1}
+  </button>
+))}
+
+  <button
+    onClick={() => setCurrentPage(currentPage + 1)}
+    disabled={currentPage === totalPages}
+  >
+    Next
+  </button>
+</div>
 
               </div>
 

@@ -3,7 +3,7 @@ import { useGetUsersQuery } from "../../services/api";
 import { useDispatch } from "react-redux";
 import { login } from "../../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
-import "./Login.css";
+import "./login.css";
 
 function Login() {
   const [email, setEmail] = useState("");

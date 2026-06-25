@@ -1,208 +1,325 @@
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 15px 40px;
-
   background: #131921;
-
   position: sticky;
   top: 0;
-
   z-index: 1000;
 }
-
-.logo {
-  color: white;
-  text-decoration: none;
-
-  font-size: 24px;
-  font-weight: 700;
+ 
+/* ── Brand ── */
+.brand-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-
+ 
+.brand-name {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+ 
+.dashboard-link {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #d1d5db;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+ 
+.dashboard-link:hover { color: #ff9900; }
+.dashboard-icon { font-size: 16px; }
+ 
+/* ── Search ── */
 .navbar-search {
   display: flex;
-
   width: 45%;
 }
-
+ 
 .navbar-search input {
   flex: 1;
-
   padding: 12px;
-
   border: none;
-
   outline: none;
-
   border-radius: 6px 0 0 6px;
-
   font-size: 15px;
 }
-
+ 
 .navbar-search button {
   border: none;
-
   padding: 12px 18px;
-
   background: #febd69;
-
   cursor: pointer;
-
   border-radius: 0 6px 6px 0;
-
   font-size: 18px;
 }
-
+ 
+/* ── Right icons ── */
 .navbar-icons {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-
+ 
 .navbar-icons a {
   color: white;
-
   font-size: 22px;
-
   transition: 0.3s;
 }
-
-.navbar-icons a:hover {
-  color: #febd69;
-}
-
-.logout-btn {
-  background: #febd69;
-
-  border: none;
-
-  padding: 10px 15px;
-
-  border-radius: 6px;
-
-  cursor: pointer;
-
-  font-weight: 600;
-}
-
-.logout-btn:hover {
-  background: #f3a847;
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .navbar-search {
-    width: 100%;
-  }
-
-}
-
+ 
+.navbar-icons a:hover { color: #febd69; }
+ 
 .products-link {
   color: white;
   text-decoration: none;
   font-weight: 600;
 }
-
-.products-link:hover {
-  color: #febd69;
-}
-.brand-section{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-}
-
-.brand-name{
-  color:white;
-  font-size:28px;
-  font-weight:700;
-  letter-spacing:1px;
-}
-
-.dashboard-link{
-  margin-top:6px;
-
-  display:flex;
-  align-items:center;
-  gap:8px;
-
-  text-decoration:none;
-
-  color:#d1d5db;
-
-  font-size:15px;
-  font-weight:500;
-
-  transition:0.3s;
-}
-
-.dashboard-link:hover{
-  color:#ff9900;
-}
-
-.dashboard-icon{
-  font-size:16px;
-}
-
-/* Icon Wrapper */
-
-.nav-icon{
+ 
+.products-link:hover { color: #febd69; }
+ 
+/* ── Nav icon with badge ── */
+.nav-icon {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   color: white;
-
   font-size: 22px;
-
   text-decoration: none;
-
   transition: .3s;
 }
-
-.nav-icon:hover{
-  color:#ff9900;
+ 
+.nav-icon:hover { color: #ff9900; }
+ 
+.icon-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ff3b30;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #131921;
+  padding: 0 5px;
 }
-
-/* Badge */
-
-.icon-badge{
-
-  position:absolute;
-
-  top:-8px;
-
-  right:-10px;
-
-  min-width:20px;
-
-  height:20px;
-
-  border-radius:50%;
-
-  background:#ff3b30;
-
-  color:#fff;
-
-  font-size:11px;
-
-  font-weight:700;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  border:2px solid #131921;
-
-  padding:0 5px;
-
+ 
+/* ─────────────────────────────────────────
+   SETTINGS AVATAR BUTTON
+───────────────────────────────────────── */
+ 
+.settings-wrapper {
+  position: relative;
+}
+ 
+.avatar-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.1);
+  border: 1.5px solid rgba(255,255,255,0.2);
+  border-radius: 50px;
+  padding: 6px 12px 6px 6px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+ 
+.avatar-btn:hover {
+  background: rgba(255,153,0,0.15);
+  border-color: #ff9900;
+}
+ 
+.avatar-initials {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff9900, #febd69);
+  color: #111;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+}
+ 
+.avatar-cog {
+  color: #d1d5db;
+  font-size: 14px;
+  transition: transform 0.4s ease;
+}
+ 
+.avatar-btn:hover .avatar-cog {
+  transform: rotate(60deg);
+  color: #ff9900;
+}
+ 
+/* ─────────────────────────────────────────
+   SETTINGS DROPDOWN
+───────────────────────────────────────── */
+ 
+.settings-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: 260px;
+  background: #1e2530;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+  overflow: hidden;
+  animation: dropdownIn 0.18s ease;
+  z-index: 2000;
+}
+ 
+@keyframes dropdownIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+ 
+/* User info block */
+.dropdown-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: rgba(255,153,0,0.07);
+}
+ 
+.dropdown-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff9900, #febd69);
+  color: #111;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+ 
+.dropdown-name {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 2px 0;
+}
+ 
+.dropdown-email {
+  color: #9ca3af;
+  font-size: 11.5px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 160px;
+}
+ 
+/* Divider */
+.dropdown-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+  margin: 4px 0;
+}
+ 
+/* Menu items */
+.dropdown-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  color: #d1d5db;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  text-align: left;
+}
+ 
+.dropdown-item:hover {
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+}
+ 
+.dropdown-icon {
+  font-size: 15px;
+  color: #9ca3af;
+  flex-shrink: 0;
+  transition: color 0.15s;
+}
+ 
+.dropdown-item:hover .dropdown-icon {
+  color: #ff9900;
+}
+ 
+.dropdown-icon.sun  { color: #fbbf24; }
+.dropdown-icon.moon { color: #818cf8; }
+ 
+/* Theme badge pill */
+.theme-badge {
+  margin-left: auto;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255,153,0,0.15);
+  color: #ff9900;
+  letter-spacing: 0.5px;
+}
+ 
+/* Logout item */
+.dropdown-logout {
+  color: #fca5a5;
+}
+ 
+.dropdown-logout:hover {
+  background: rgba(239,68,68,0.1);
+  color: #ef4444;
+}
+ 
+.dropdown-logout .dropdown-icon {
+  color: #fca5a5;
+}
+ 
+.dropdown-logout:hover .dropdown-icon {
+  color: #ef4444;
+}
+ 
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+ 
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+ 
+  .navbar-search {
+    width: 100%;
+  }
+ 
+  .settings-dropdown {
+    right: -60px;
+    width: 240px;
+  }
 }

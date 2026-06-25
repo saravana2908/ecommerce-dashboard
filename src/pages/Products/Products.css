@@ -50,6 +50,20 @@
   margin-bottom: 18px;
 }
 
+.loading-more {
+  text-align: center;
+  padding: 25px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #555;
+}
+.end-message {
+  text-align: center;
+  padding: 30px;
+  color: #888;
+  font-size: 17px;
+  font-weight: 600;
+}
 .sidebar-title {
   font-size: 15px;
   font-weight: 700;

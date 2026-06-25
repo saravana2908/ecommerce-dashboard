@@ -2,11 +2,21 @@ import Navbar from "../../components/Navbar";
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromWishlist } from "../../features/wishlist/wishlistSlice";
 import "./Wishlist.css";
-
+import { useState } from "react";
+import { addToCart } from "../../features/cart/cartSlice";
 function Wishlist() {
   const dispatch = useDispatch();
   const wishlistItems = useSelector((state) => state.wishlist.items);
+const [currentPage, setCurrentPage] = useState(1);
 
+const itemsPerPage = 3;
+const totalPages = Math.ceil(wishlistItems.length / itemsPerPage);
+
+const startIndex = (currentPage - 1) * itemsPerPage;
+
+const endIndex = startIndex + itemsPerPage;
+
+const currentWishlistItems = wishlistItems.slice(startIndex, endIndex);
   return (
     <>
       <Navbar />
@@ -46,7 +56,7 @@ function Wishlist() {
 
               {/* ── Grid ── */}
               <div className="wl-grid">
-                {wishlistItems.map((item) => (
+                {currentWishlistItems.map((item) => (
                   <div className="wl-card" key={item.id}>
 
                     {/* Remove (top-right X) */}
@@ -81,7 +91,12 @@ function Wishlist() {
                       </div>
 
                       <div className="wl-actions">
-                        <button className="wl-cart-btn">🛒 Add to Cart</button>
+                        <button
+  className="wl-cart-btn"
+  onClick={() => dispatch(addToCart(item))}
+>
+  🛒 Add to Cart
+</button>
                         <button
                           className="wl-del-btn"
                           onClick={() => dispatch(removeFromWishlist(item.id))}
@@ -93,6 +108,33 @@ function Wishlist() {
 
                   </div>
                 ))}
+                {totalPages > 1 && (
+  <div className="wishlist-pagination">
+    <button
+      onClick={() => setCurrentPage(currentPage - 1)}
+      disabled={currentPage === 1}
+    >
+      Previous
+    </button>
+
+    {Array.from({ length: totalPages }, (_, index) => (
+      <button
+        key={index}
+        onClick={() => setCurrentPage(index + 1)}
+        className={currentPage === index + 1 ? "active-page" : ""}
+      >
+        {index + 1}
+      </button>
+    ))}
+
+    <button
+      onClick={() => setCurrentPage(currentPage + 1)}
+      disabled={currentPage === totalPages}
+    >
+      Next
+    </button>
+  </div>
+)}
               </div>
 
               {/* ── Sidebar Summary ── */}
