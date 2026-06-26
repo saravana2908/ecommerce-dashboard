@@ -1,73 +1,74 @@
-# Progress Tracker
+✅ Improvements Made
 
-## Completed
+1. Routing & Guards
 
-### Project Setup
+path="/home" renamed to path="/dashboard"
+All protected routes wrapped in ProtectedRoute
 
-* Created React project using Vite.
-* Converted project from TypeScript to JavaScript.
-* Migrated React version from React 19 to React 18.
-* Migrated React Router DOM from version 7 to version 6.
-* Configured project folder structure.
 
-### Redux Toolkit
+2. Redux Toolkit Design
 
-* Created Redux Store.
-* Created Authentication Slice.
-* Connected Redux Provider with the application.
-* Verified Redux state management flow.
 
-### Routing
+themeSlice wired to toggle dark/light mode
+notificationSlice handles add/remove/clear notifications
+uiSlice manages modal and drawer state
 
-* Configured Browser Router.
-* Prepared route structure for application pages.
 
-### Redux Persist
+3. Redux Persist Strategy
 
-* Configured Redux Persist.
-* Verified state persistence after page refresh.
 
-### RTK Query
+persistReducer wired for auth, wishlist, cart, theme
+Added version: 1 and createMigrate to all persist configs
+Correct whitelist per slice:
 
-* Created API Slice.
-* Connected RTK Query with Redux Store.
-* Configured API reducer and middleware.
-* Understood query and caching flow.
+auth → ["user", "isLoggedIn"]
+wishlist → ["ids", "entities"]
+cart → ["ids", "entities"]
+theme → ["mode"]
 
-### Mock Backend
 
-* Created db.json as local database.
-* Installed and configured JSON Server.
-* Created local API endpoints.
-* Verified API responses through browser.
 
-### Products Module
 
-* Created Products Page.
-* Configured Products API endpoint.
-* Fetched products using RTK Query.
-* Displayed products on UI successfully.
 
-### Authentication Module
+4. State Normalization
 
-* Created Register Page structure.
-* Created Login Page structure.
-* Implemented useState for form field handling.
-* Verified input state updates successfully.
 
-## In Progress
+createEntityAdapter added to cartSlice
+createEntityAdapter added to wishlistSlice
+Exposes selectAll, selectById, selectIds selectors
 
-* User Registration API Integration.
-* Login Functionality.
-* Authentication Flow.
 
-## Pending
+5. Error Handling
 
-* Product Details Page.
-* Cart Module.
-* Wishlist Module.
-* Profile Module.
-* Dashboard Module.
-* Search and Filter Functionality.
-* Final UI Design.
-* Responsive Design.
+
+401 interceptor in api.js — auto logout + redirect to /login
+Specific error messages per status code (401, 403, 404, 500, network error)
+"Try Again" button on error screen
+
+
+6. Offline Support
+
+
+Cart and wishlist persisted — work offline
+OfflineBanner component shows red banner when offline
+RTK Query keepUnusedDataFor: 300 caches data for 5 minutes
+
+
+7. Code Organization
+
+
+Added src/utils/ — formatPrice, filterProducts, localStorage
+Added src/hooks/ — useAuth, useCart, useWishlist
+Added src/constants/ — categories, routes
+Added src/types/ — product JSDoc typedefs
+Added index.js barrel exports to every feature folder
+
+
+8. JavaScript Quality
+
+
+Fixed 2 runtime-crashing bugs in Products.jsx
+Added missing toast import
+Fixed stale closure in IntersectionObserver
+Fixed CSS class mismatch details-btn → btn-details
+Added ?? [] fallback on all array selectors
