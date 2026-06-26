@@ -1,5 +1,5 @@
 import Navbar from "../../components/Navbar";
-import "./Home.css";
+import "./home.css";
 import { useSelector } from "react-redux";
 const categories = [
   {
@@ -473,7 +473,7 @@ function Home() {
       <section className="section categories-section">
         <div className="section-header">
           <h2>Shop By Category</h2>
-          <a href="/products" className="see-all-link">See All →</a>
+        
         </div>
         <div className="category-grid">
           {categories.map((cat) => (
@@ -495,7 +495,7 @@ function Home() {
       <section className="section featured-section">
         <div className="section-header">
           <h2>Featured Products</h2>
-          <a href="/products" className="see-all-link">View All →</a>
+          
         </div>
         <div className="product-grid">
           {featuredProducts.map((p) => (
@@ -504,8 +504,7 @@ function Home() {
               <div className="product-img-wrap">
                 <img src={p.img} alt={p.name} />
                 <div className="product-actions-overlay">
-                  <button className="quick-btn" title="Add to Wishlist">♡</button>
-                  <button className="quick-btn" title="Quick View">👁</button>
+                 
                 </div>
               </div>
               <div className="product-info">
@@ -517,7 +516,7 @@ function Home() {
                   <span className="product-original">{p.originalPrice}</span>
                   <span className="product-discount">{p.discount}</span>
                 </div>
-                <button className="btn-add-cart">Add to Cart</button>
+                
               </div>
             </div>
           ))}
@@ -528,7 +527,7 @@ function Home() {
       <section className="section deals-section">
         <div className="section-header">
           <h2>⚡ Deals of the Day</h2>
-          <a href="/products" className="see-all-link">All Deals →</a>
+          
         </div>
         <div className="deals-grid">
           {deals.map((d) => (
@@ -565,10 +564,7 @@ function Home() {
             <h2>Get Exclusive Deals First</h2>
             <p>Subscribe and save up to ₹2,000 on your first order.</p>
           </div>
-          <div className="newsletter-form">
-            <input type="email" placeholder="Enter your email address" />
-            <button className="btn-primary">Subscribe</button>
-          </div>
+          
         </div>
       </section>
 
@@ -589,21 +585,21 @@ function Home() {
           <div className="footer-col">
             <h4>Quick Links</h4>
             <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/products">Products</a></li>
-              <li><a href="/wishlist">Wishlist</a></li>
-              <li><a href="/cart">Cart</a></li>
-              <li><a href="/profile">My Account</a></li>
+              <li>Home</li>
+              <li>Products</li>
+              <li>Wishlist</li>
+              <li>Cart</li>
+              <li>My Account</li>
             </ul>
           </div>
 
           <div className="footer-col">
             <h4>Categories</h4>
             <ul>
-              <li><a href="#">Mobiles</a></li>
-              <li><a href="#">Laptops</a></li>
-              <li><a href="#">Headphones</a></li>
-              <li><a href="#">Smartwatches</a></li>
+              <li>Mobiles</li>
+              <li>Laptops</li>
+              <li>Headphones</li>
+              <li>Smartwatches</li>
             </ul>
           </div>
 

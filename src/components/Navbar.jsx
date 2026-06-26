@@ -44,6 +44,21 @@ function Navbar() {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
+  const [isOnline, setIsOnline] = useState(navigator.onLine);
+
+useEffect(() => {
+  const handleOnline = () => setIsOnline(true);
+  const handleOffline = () => setIsOnline(false);
+
+  window.addEventListener("online", handleOnline);
+  window.addEventListener("offline", handleOffline);
+
+  return () => {
+    window.removeEventListener("online", handleOnline);
+    window.removeEventListener("offline", handleOffline);
+  };
+}, []);
+
   const handleLogout = () => {
     dispatch(logout());
     setDropdownOpen(false);
@@ -59,6 +74,7 @@ function Navbar() {
     ? user.name.split(" ").map((n) => n[0]).join("").toUpperCase().slice(0, 2)
     : "U";
 
+    
   return (
     <nav className="navbar">
 
@@ -85,6 +101,16 @@ function Navbar() {
       {/* ── Right icons ── */}
       <div className="navbar-icons">
 
+
+<div
+  className={
+    isOnline
+      ? "network-status online"
+      : "network-status offline"
+  }
+>
+  {isOnline ? "🟢 Online" : "🔴 Offline"}
+</div>
         <Link to="/products" className="products-link">Products</Link>
 
         <Link to="/wishlist" className="nav-icon">

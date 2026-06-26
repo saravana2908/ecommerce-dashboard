@@ -13,7 +13,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const userData = { name, email, password };
-    await registerUser(userData);
+    await registerUser(userData).unwrap();
     alert("Registration Successful");
     navigate("/");
   };

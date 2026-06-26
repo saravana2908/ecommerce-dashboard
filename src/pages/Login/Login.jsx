@@ -8,7 +8,9 @@ import "./login.css";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { data: users = [] } = useGetUsersQuery();
+  const { data: users = [] } = useGetUsersQuery(undefined, {
+  refetchOnMountOrArgChange: true,
+});
   const [error, setError] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
